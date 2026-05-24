@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#0F172A] text-[#F9FAFB] font-inter antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+
+  ::selection {
+    @apply bg-[#6366F1] text-white;
+  }
+
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-[#0F172A];
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#374151] rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#4B5563];
+  }
+}
+
+@layer components {
+  .glass-nav {
+    @apply bg-[#0F172A]/80 backdrop-blur-md border-b border-[#374151]/50;
+  }
+  
+  .glass-card {
+    @apply bg-[#1F2937]/80 backdrop-blur-sm border border-[#374151]/50;
+  }
+}
