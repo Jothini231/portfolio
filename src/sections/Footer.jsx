@@ -10,7 +10,7 @@ const Footer = () => {
           
           
           <div className="text-secondaryText text-sm text-center md:text-left">
-            <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Jothini Sivanesan. All rights reserved.</p>
           </div>
 
           
