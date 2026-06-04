@@ -6,11 +6,11 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    /* Lenis handles smooth scrolling */
   }
   
   body {
-    @apply bg-[#0F172A] text-[#F9FAFB] font-inter antialiased;
+    @apply bg-[#000000] text-[#FFFFFF] font-inter antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -18,7 +18,7 @@
   }
 
   ::selection {
-    @apply bg-[#6366F1] text-white;
+    @apply bg-[#00D4FF] text-[#000000];
   }
 
   
@@ -26,22 +26,22 @@
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    @apply bg-[#0F172A];
+    @apply bg-[#000000];
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-[#374151] rounded-full;
+    @apply bg-[#2A2A2A] rounded-full;
   }
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-[#4B5563];
+    @apply bg-[#333333];
   }
 }
 
 @layer components {
   .glass-nav {
-    @apply bg-[#0F172A]/80 backdrop-blur-md border-b border-[#374151]/50;
+    @apply bg-[#000000]/80 backdrop-blur-md border-b border-[#2A2A2A]/50;
   }
   
   .glass-card {
-    @apply bg-[#1F2937]/80 backdrop-blur-sm border border-[#374151]/50;
+    @apply bg-[#111111]/80 backdrop-blur-sm border border-[#2A2A2A]/50 shadow-[0_0_15px_rgba(0,212,255,0.05)];
   }
 }

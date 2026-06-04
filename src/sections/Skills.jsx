@@ -9,7 +9,7 @@ const technicalSkills = [
     skills: ['Java', 'JavaScript (ES6+)', 'C Programming', 'PHP', 'HTML5 & CSS3']
   },
   {
-    category: 'Frameworks',
+    category: 'Frameworks & Libraries',
     icon: <Blocks size={28} />,
     skills: ['React.js', 'Spring Boot', 'Tailwind CSS']
   },
@@ -39,9 +39,9 @@ const Skills = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex items-center gap-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primaryText">My Skills</h2>
-            <div className="h-[1px] bg-border flex-grow"></div>
+          <div className="flex items-center gap-4 mb-16 justify-center flex-col text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-primaryText">My Skills</h2>
+            <div className="w-24 h-1 bg-accent rounded-full mt-4"></div>
           </div>
         </motion.div>
 
@@ -57,13 +57,13 @@ const Skills = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="group p-8 bg-card rounded-2xl border border-border hover:border-accent/50 transition-all duration-300 relative overflow-hidden shadow-lg"
+                className="group p-8 bg-card rounded-2xl border border-border hover:border-accentHover/50 transition-all duration-300 relative overflow-hidden shadow-lg"
               >
                 <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-6 pb-4 border-b border-border/50">
-                    <div className="w-12 h-12 rounded-xl bg-background border border-border flex items-center justify-center text-accent group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition-all duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-background border border-border flex items-center justify-center text-accent group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(0,212,255,0.2)] transition-all duration-300">
                       {tech.icon}
                     </div>
                     <h4 className="text-xl font-bold text-primaryText">{tech.category}</h4>
@@ -96,12 +96,12 @@ const Skills = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="group p-8 bg-card rounded-2xl border border-border hover:border-accent/50 transition-all duration-300 relative overflow-hidden shadow-lg"
+                className="group p-8 bg-card rounded-2xl border border-border hover:border-accentHover/50 transition-all duration-300 relative overflow-hidden shadow-lg"
               >
                 <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="relative z-10">
-                  <div className="w-16 h-16 rounded-2xl bg-background border border-border flex items-center justify-center text-accent mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(99,102,241,0.2)] transition-all duration-300">
+                  <div className="w-16 h-16 rounded-2xl bg-background border border-border flex items-center justify-center text-accent mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(0,212,255,0.2)] transition-all duration-300">
                     {skill.icon}
                   </div>
                   

@@ -39,9 +39,9 @@ const Projects = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex items-center gap-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primaryText">Featured Projects</h2>
-            <div className="h-[1px] bg-border flex-grow"></div>
+          <div className="flex items-center gap-4 mb-12 justify-center flex-col text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-primaryText">Featured Projects</h2>
+            <div className="w-24 h-1 bg-accent rounded-full mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -64,7 +64,7 @@ const Projects = () => {
                 </div>
                 
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold text-primaryText mb-3 group-hover:text-accent transition-colors">{project.title}</h3>
+                  <h3 className="text-2xl font-bold text-primaryText mb-3 group-hover:text-accentHover transition-colors">{project.title}</h3>
                   <p className="text-secondaryText mb-6 flex-grow">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -76,7 +76,7 @@ const Projects = () => {
                   </div>
                   
                   <div className="flex items-center gap-4 mt-auto">
-                    <a href={project.github} className="text-primaryText hover:text-accent transition-colors flex items-center gap-2">
+                    <a href={project.github} className="text-primaryText hover:text-accentHover transition-colors flex items-center gap-2">
                       <FaGithub size={20} />
                       <span className="text-sm font-medium">Code</span>
                     </a>

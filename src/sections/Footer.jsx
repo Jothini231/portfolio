@@ -16,10 +16,10 @@ const Footer = () => {
           
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
             <div className="flex gap-6">
-              <a href="#" className="text-secondaryText hover:text-accent transition-colors">
+              <a href="https://github.com/Jothini231" className="text-secondaryText hover:text-accentHover transition-colors">
                 <FaGithub size={24} />
               </a>
-              <a href="#" className="text-secondaryText hover:text-accent transition-colors">
+              <a href="www.linkedin.com/in/jothini-sivanesan" className="text-secondaryText hover:text-accentHover transition-colors">
                 <FaLinkedin size={24} />
               </a>
             </div>

@@ -37,7 +37,7 @@ const Navbar = () => {
               smooth={true}
               offset={-80}
               duration={500}
-              className="text-secondaryText hover:text-accent font-medium cursor-pointer transition-colors"
+              className="text-secondaryText hover:text-accentHover font-medium cursor-pointer transition-colors"
               activeClass="text-accent"
             >
               {link.title}

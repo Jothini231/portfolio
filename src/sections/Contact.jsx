@@ -84,6 +84,7 @@ const Contact = () => {
         >
           <div className="flex items-center gap-4 mb-16 text-center justify-center flex-col">
             <h2 className="text-3xl md:text-5xl font-bold text-primaryText">Get In Touch</h2>
+            <div className="w-24 h-1 bg-accent rounded-full mt-2"></div>
             <p className="text-secondaryText max-w-2xl text-lg mt-4">
               I'm currently looking for new opportunities. If you have any questions, I'll try my best to get back to you!
             </p>
@@ -197,7 +198,7 @@ const Contact = () => {
                 className={`w-full bg-accent text-white py-3 rounded-lg font-medium transition-all duration-300 shadow-lg shadow-accent/20 ${
                   status.submitting 
                     ? 'opacity-70 cursor-not-allowed' 
-                    : 'hover:bg-accent/90 hover:-translate-y-1 hover:shadow-accent/40'
+                    : 'hover:bg-accentHover hover:-translate-y-1 hover:shadow-accent/40'
                 }`}
               >
                 {status.submitting ? 'Sending...' : 'Send Message'}

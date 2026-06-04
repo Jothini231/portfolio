@@ -7,13 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#0F172A',
-        secondary: '#111827',
-        card: '#1F2937',
-        primaryText: '#F9FAFB',
-        secondaryText: '#9CA3AF',
-        accent: '#6366F1',
-        border: '#374151',
+        background: '#000000',
+secondary: '#0F0F0F',
+card: '#18181B',
+primaryText: '#FFFFFF',
+secondaryText: '#A1A1AA',
+accent: '#8B5CF6',
+accentHover: '#7C3AED',
+border: '#27272A',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

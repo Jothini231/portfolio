@@ -42,9 +42,9 @@ const Articles = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex items-center gap-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primaryText">Latest Articles</h2>
-            <div className="h-[1px] bg-border flex-grow"></div>
+          <div className="flex items-center gap-4 mb-12 justify-center flex-col text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-primaryText">Latest Articles</h2>
+            <div className="w-24 h-1 bg-accent rounded-full mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -58,7 +58,7 @@ const Articles = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-card rounded-2xl overflow-hidden border border-border hover:border-accent/50 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-2"
+                className="group bg-card rounded-2xl overflow-hidden border border-border hover:border-accentHover/50 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-2"
               >
                 <div className="relative h-48 overflow-hidden bg-secondary flex-shrink-0">
                   <img 
@@ -79,7 +79,7 @@ const Articles = () => {
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-primaryText mb-3 line-clamp-2 group-hover:text-accent transition-colors">
+                  <h3 className="text-xl font-bold text-primaryText mb-3 line-clamp-2 group-hover:text-accentHover transition-colors">
                     {article.title}
                   </h3>
                   
