@@ -4,6 +4,13 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const projects = [
   {
+    title: "Expense Tracker",
+    description: "A comprehensive personal finance application to track daily expenses, manage budgets, and visualize spending habits.",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=600",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "GitHub Actions"],
+    github: "#",
+  },
+  {
     title: "Employee Management System",
     description: "Developed an enterprise employee management system with role-based access control for handling employee records, leave, and payroll.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
