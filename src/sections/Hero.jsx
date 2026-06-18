@@ -19,7 +19,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6 md:ml-8 lg:ml-20"
+          className="space-y-6 md:ml-4 lg:ml-8 lg:pr-8"
         >
           <motion.p 
             initial={{ opacity: 0 }}
@@ -33,11 +33,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold font-poppins text-primaryText leading-tight"
+            className="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-bold font-poppins text-primaryText leading-tight"
           >
            Hi, I'm
 <br />
-<span className="whitespace-nowrap inline-block pt-4  text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">
+<span className="whitespace-nowrap inline-block pt-4 text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">
   Jothini Sivanesan
 </span>
           </motion.h1>
