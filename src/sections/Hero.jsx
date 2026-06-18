@@ -13,13 +13,13 @@ const Hero = () => {
         <div className="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-cyan-500/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-8 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6"
+          className="space-y-6 md:ml-8 lg:ml-20"
         >
           <motion.p 
             initial={{ opacity: 0 }}
@@ -88,9 +88,9 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative flex justify-center items-center translate-x-4 md:translate-x-8"
+          className="relative flex justify-center items-center mt-6 md:mt-0"
         >
-          <div className="relative w-72 h-72 md:w-96 md:h-96">
+          <div className="relative w-full max-w-[24rem] aspect-square md:w-96 md:h-96">
             <div className="absolute inset-0 bg-gradient-to-tr from-accent to-blue-500 rounded-full transform rotate-6 opacity-30 blur-lg shadow-[0_0_30px_rgba(0,212,255,0.3)]"></div>
             
             <img 

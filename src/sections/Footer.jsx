@@ -19,7 +19,7 @@ const Footer = () => {
               <a href="https://github.com/Jothini231" className="text-secondaryText hover:text-accentHover transition-colors">
                 <FaGithub size={24} />
               </a>
-              <a href="www.linkedin.com/in/jothini-sivanesan" className="text-secondaryText hover:text-accentHover transition-colors">
+              <a href="https://www.linkedin.com/in/jothini-sivanesan" className="text-secondaryText hover:text-accentHover transition-colors">
                 <FaLinkedin size={24} />
               </a>
             </div>

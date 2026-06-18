@@ -4,27 +4,27 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const projects = [
   {
-    title: "Expense Tracker",
-    description: "A comprehensive personal finance application to track daily expenses, manage budgets, and visualize spending habits.",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=600",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "GitHub Actions"],
-    github: "#",
+    title: "BookFair Stall Reservation System (Group project)",
+    description: "Built a full-stack book fair stall reservation system with interactive stall selection, JWT authentication, QR code ticket generation, email automation, payment processing, and double-booking prevention.",
+    image:"https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=600",
+    techStack: ["React","Java","Spring Boot","Spring Security","JWT","MySQL","Hibernate","Tailwind CSS","Thymeleaf","ZXing","JavaMailSender"],
+    github: "https://github.com/Sathiyabalan29/BookFair.git",
+    
   },
   {
     title: "Employee Management System",
-    description: "Developed an enterprise employee management system with role-based access control for handling employee records, leave, and payroll.",
+    description: "Built a full-stack Employee Management System with role-based authentication, employee and department management, leave request workflows, payroll processing, and interactive HR analytics dashboards.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
-    techStack: ["React", "Spring Boot", "MySQL", "JWT" , "Tailwind CSS"],
+    techStack: ["React","Spring Boot","Spring Security", "JWT","MySQL","Hibernate","Tailwind CSS","Recharts"],
     github: "https://github.com/Jothini231/employee-management-system.git",
     
   },
   {
-    title: "Bookfair Reservation System",
-    description: "Built a web system for book fair stall reservations with real-time availability and double-booking prevention using REST APIs.",
-    image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=600",
-    techStack: ["React", "Java", "Spring Boot", "MYSQL","JWT","Tailwind CSS"],
-    github: "https://github.com/Sathiyabalan29/BookFair.git",
-    
+    title: "Expense Tracker",
+    description: "A comprehensive personal finance application to track daily expenses, manage budgets, and visualize spending habits.",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=600",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "GitHub Actions"],
+    github: "https://github.com/Jothini231/expense-tracker.git",
   },
   {
     title: "Spotify Clone",
