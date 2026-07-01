@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTheme } from '../context/ThemeContext';
 
 const navLinks = [
   { title: 'Home', path: 'hero' },
   { title: 'About', path: 'about' },
   { title: 'Skills', path: 'skills' },
+  { title: 'Achievements', path: 'achievements' },
   { title: 'Projects', path: 'projects' },
   { title: 'Articles', path: 'articles' },
   { title: 'Contact', path: 'contact' },
@@ -15,6 +17,7 @@ const navLinks = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,21 +57,39 @@ const Navbar = () => {
               smooth={true}
               offset={-100}
               duration={500}
-              className="px-4 py-2 rounded-full text-sm font-medium cursor-pointer transition-all duration-300 text-secondaryText hover:text-primaryText hover:bg-white/5"
-              activeClass="!text-accent !bg-accent/10"
+              className="relative px-4 py-2 text-sm font-medium cursor-pointer transition-colors duration-300 text-secondaryText hover:text-primaryText group"
+              activeClass="!text-accent"
             >
-              {link.title}
+              <span>{link.title}</span>
+              <span className="absolute left-4 right-4 bottom-1 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></span>
             </Link>
           ))}
+          
+          <button
+            onClick={toggleTheme}
+            className={`ml-4 p-2 rounded-full transition-colors text-secondaryText hover:text-primaryText ${theme === 'dark' ? 'hover:bg-white/5' : 'hover:bg-black/5'}`}
+            aria-label="Toggle Theme"
+          >
+            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+          </button>
         </nav>
 
-        {/* Mobile Menu Toggle Button */}
-        <button
-          className="md:hidden text-primaryText p-2 rounded-full hover:bg-white/5 transition-colors"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Menu & Theme Toggle (Mobile) */}
+        <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            className={`p-2 rounded-full transition-colors text-secondaryText hover:text-primaryText ${theme === 'dark' ? 'hover:bg-white/5' : 'hover:bg-black/5'}`}
+            aria-label="Toggle Theme"
+          >
+            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+          </button>
+          <button
+            className={`text-primaryText p-2 rounded-full transition-colors ${theme === 'dark' ? 'hover:bg-white/5' : 'hover:bg-black/5'}`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Dropdown */}
@@ -89,7 +110,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-80}
                 duration={500}
-                className="w-[80%] text-center py-3 rounded-xl text-secondaryText font-medium cursor-pointer text-lg transition-colors hover:bg-white/5 hover:text-primaryText"
+                className={`w-[80%] text-center py-3 rounded-xl text-secondaryText font-medium cursor-pointer text-lg transition-colors hover:text-primaryText ${theme === 'dark' ? 'hover:bg-white/5' : 'hover:bg-black/5'}`}
                 activeClass="!text-accent !bg-accent/10"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

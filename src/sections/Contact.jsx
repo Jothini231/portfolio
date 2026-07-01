@@ -73,7 +73,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-secondary">
+    <section id="contact" className="py-24 bg-background">
       <div className="container mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -83,8 +83,14 @@ const Contact = () => {
           className="max-w-5xl mx-auto"
         >
           <div className="flex items-center gap-4 mb-16 text-center justify-center flex-col">
-            <h2 className="text-3xl md:text-5xl font-bold text-primaryText">Get In Touch</h2>
-            <div className="w-24 h-1 bg-accent rounded-full mt-2"></div>
+            <h2 className="text-3xl md:text-5xl font-bold text-primaryText">
+              Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-accent">Touch</span>
+            </h2>
+            <div className="flex items-center gap-2 mt-4">
+              <div className="w-12 h-1 bg-accent rounded-full"></div>
+              <div className="w-3 h-1 bg-accent rounded-full"></div>
+              <div className="w-1 h-1 bg-accent rounded-full"></div>
+            </div>
             <p className="text-secondaryText max-w-2xl text-lg mt-4">
               I'm currently looking for new opportunities. If you have any questions, I'll try my best to get back to you!
             </p>

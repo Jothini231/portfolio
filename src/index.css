@@ -4,13 +4,38 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-background: 246 248 250; /* light background */
+  --color-secondary: 235 238 242; /* light surface */
+  --color-card: 255 255 255; /* white card */
+  --color-primaryText: 13 17 23; /* near-black text */
+  --color-secondaryText: 87 96 106; /* muted text */
+  --color-accent: 59 130 246; /* #3B82F6 blue */
+  --color-accentHover: 37 99 235; /* blue-600 */
+  --color-border: 208 215 222; /* light border */
+}
+
+.dark {
+  --color-background: 13 17 23;   /* #0D1117 */
+  --color-secondary: 22 27 34;    /* #161B22 */
+  --color-card: 22 27 34;         /* #161B22 */
+  --color-primaryText: 230 237 243; /* #E6EDF3 */
+  --color-secondaryText: 139 148 158; /* #8B949E */
+  --color-accent: 59 130 246;     /* #3B82F6 */
+  --color-accentHover: 37 99 235; /* blue-600 */
+  --color-border: 48 54 61;       /* #30363D */
+}
+
 @layer base {
+
   html {
     /* Lenis handles smooth scrolling */
   }
   
   body {
-    @apply bg-[#000000] text-[#FFFFFF] font-inter antialiased;
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-primaryText));
+    @apply font-inter antialiased transition-colors duration-300;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -18,30 +43,33 @@
   }
 
   ::selection {
-    @apply bg-[#00D4FF] text-[#000000];
+    @apply bg-accent/30 text-accent;
   }
 
-  
   ::-webkit-scrollbar {
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    @apply bg-[#000000];
+    @apply bg-background;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-[#2A2A2A] rounded-full;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-[#333333];
+    @apply bg-secondaryText/30 rounded-full hover:bg-secondaryText/50 transition-colors;
   }
 }
 
 @layer components {
-  .glass-nav {
-    @apply bg-[#000000]/80 backdrop-blur-md border-b border-[#2A2A2A]/50;
-  }
-  
   .glass-card {
-    @apply bg-[#111111]/80 backdrop-blur-sm border border-[#2A2A2A]/50 shadow-[0_0_15px_rgba(0,212,255,0.05)];
+    background-color: rgba(var(--color-card), 0.8);
+    @apply backdrop-blur-sm border border-border/50 shadow-xl;
   }
+}
+
+@layer utilities {
+  .animation-delay-2000 { animation-delay: 2s; }
+  .animation-delay-4000 { animation-delay: 4s; }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
 }

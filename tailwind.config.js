@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,14 +8,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#000000',
-secondary: '#0F0F0F',
-card: '#18181B',
-primaryText: '#FFFFFF',
-secondaryText: '#A1A1AA',
-accent: '#8B5CF6',
-accentHover: '#7C3AED',
-border: '#27272A',
+        background: 'rgb(var(--color-background) / <alpha-value>)',
+        secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+        card: 'rgb(var(--color-card) / <alpha-value>)',
+        primaryText: 'rgb(var(--color-primaryText) / <alpha-value>)',
+        secondaryText: 'rgb(var(--color-secondaryText) / <alpha-value>)',
+        accent: 'rgb(var(--color-accent) / <alpha-value>)',
+        accentHover: 'rgb(var(--color-accentHover) / <alpha-value>)',
+        border: 'rgb(var(--color-border) / <alpha-value>)',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
@@ -43,3 +44,4 @@ border: '#27272A',
   },
   plugins: [],
 }
+// Trigger Vite recompile
