@@ -22,7 +22,7 @@ const projects = [
     demo: 'https://project-showcase-portal-nine.vercel.app/',
   },
   {
-    title: 'Smart Expense Tracker with AI Insights',
+    title: 'SpendWise',
     description: 'A personal finance application to track expenses and visualize financial habits with advanced AI capabilities.',
     type: 'Individual Project',
     imageDark: '/expense-dashboard.png',
@@ -30,7 +30,7 @@ const projects = [
     features: [
       'Secure JWT & Google OAuth authentication',
       'Google Gemini 2.5 Flash AI scans receipts & extracts expense details',
-      'Cloudinary-based receipt image uploads',
+      'Cloudinary-based image uploads',
       'Interactive expense visualizations with Recharts',
       'Excel export for offline record-keeping',
     ],
