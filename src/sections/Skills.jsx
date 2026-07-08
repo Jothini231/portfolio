@@ -6,8 +6,8 @@ const skillCategories = [
   { title: 'Frontend Development',    skills: ['React.js', 'Tailwind CSS'] },
   { title: 'Backend Development',     skills: ['Spring Boot', 'Node.js', 'Express.js', 'PHP'] },
   { title: 'Database Technologies',   skills: ['MySQL', 'MongoDB'] },
-  { title: 'Tools & Platforms',       skills: ['Git', 'GitHub', 'Postman', 'Figma', 'Canva'] },
-  { title: 'Core Concepts',           skills: ['OOP', 'Data Structures & Algorithms', 'SOLID Principles', 'CI/CD Pipelines'] },
+  { title: 'Tools & Platforms',       skills: ['Git', 'GitHub', 'GitHub Actions', 'Postman', 'Cloudinary', 'Vercel', 'Railway', 'Figma', 'Canva'] },
+  { title: 'Core Concepts',           skills: ['OOP', 'DSA', 'SOLID Principles', 'REST API Design', 'CI/CD Pipelines', 'Authentication (JWT, OAuth)'] },
   { title: 'Soft Skills',             skills: ['Problem Solving', 'Team Collaboration', 'Communication', 'Time Management', 'Adaptability'] },
 ];
 

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import profileImage from '../assets/profile.png';
 import { useTheme } from '../context/ThemeContext';
+import { FaGithub, FaLinkedin, FaMedium, FaEnvelope } from 'react-icons/fa';
 
 /* ── Cycle-once typewriter ── */
 const useCycleOnce = (words, typeSpeed = 80, deleteSpeed = 45, pause = 800) => {
@@ -182,22 +183,44 @@ const Hero = () => {
             I build modern, scalable, and exceptional digital experiences. Passionate about turning complex problems into elegant solutions.
           </motion.p>
 
-          {/* CTAs */}
-          <motion.div variants={item} className="flex flex-col sm:flex-row gap-3 pt-1 items-center md:items-start justify-center md:justify-start">
-            <Link to="projects" smooth={true} offset={-80} duration={500} className="w-full sm:w-auto">
-              <motion.button className="w-full sm:w-auto px-8 py-3 bg-accent text-white rounded-full font-semibold cursor-pointer shadow-lg shadow-accent/30 text-sm sm:text-base"
-                whileHover={{ scale:1.05 }} whileTap={{ scale:0.97 }}
-                animate={{ boxShadow:['0 4px 24px rgba(59,130,246,0.3)','0 4px 36px rgba(59,130,246,0.55)','0 4px 24px rgba(59,130,246,0.3)'] }}
-                transition={{ duration:2, repeat:Infinity }}>
-                View Projects
-              </motion.button>
-            </Link>
-            <motion.a href="/cv.pdf" target="_blank" rel="noreferrer"
-              className="w-full sm:w-auto px-8 py-3 bg-transparent border-2 border-border text-gray-900 dark:text-primaryText rounded-full font-semibold cursor-pointer text-center text-sm sm:text-base"
-              whileHover={{ scale:1.05, borderColor:'rgba(59,130,246,0.6)', color:'rgb(59 130 246)' }}
-              whileTap={{ scale:0.97 }} transition={{ duration:0.2 }}>
-              Download CV
-            </motion.a>
+          {/* Action Row */}
+          <motion.div variants={item} className="flex flex-col gap-6 pt-2 items-center justify-center md:items-start md:justify-start">
+            
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+              <Link to="projects" smooth={true} offset={-80} duration={500} className="w-full sm:w-auto">
+                <motion.button className="w-full sm:w-auto px-8 py-3 bg-accent text-white rounded-full font-semibold cursor-pointer text-sm sm:text-base"
+                  whileHover={{ scale:1.05 }} whileTap={{ scale:0.97 }}>
+                  View Projects
+                </motion.button>
+              </Link>
+              <motion.a href="/cv.pdf" target="_blank" rel="noreferrer"
+                className="w-full sm:w-auto px-8 py-3 bg-transparent border-2 border-border text-gray-900 dark:text-primaryText rounded-full font-semibold cursor-pointer text-center text-sm sm:text-base"
+                whileHover={{ scale:1.05, borderColor:'rgba(59,130,246,0.6)', color:'rgb(59 130 246)' }}
+                whileTap={{ scale:0.97 }} transition={{ duration:0.2 }}>
+                Download CV
+              </motion.a>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-6 sm:ml-2">
+              <a href="https://github.com/Jothini231" target="_blank" rel="noreferrer" 
+                 className="text-secondaryText hover:text-accent hover:-translate-y-1 transition-all duration-300">
+                <FaGithub size={24} />
+              </a>
+              <a href="https://www.linkedin.com/in/jothini-sivanesan/" target="_blank" rel="noreferrer" 
+                 className="text-secondaryText hover:text-accent hover:-translate-y-1 transition-all duration-300">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://medium.com/@jothini231" target="_blank" rel="noreferrer" 
+                 className="text-secondaryText hover:text-accent hover:-translate-y-1 transition-all duration-300">
+                <FaMedium size={24} />
+              </a>
+              <a href="mailto:jothini231@gmail.com" target="_blank" rel="noreferrer" 
+                 className="text-secondaryText hover:text-accent hover:-translate-y-1 transition-all duration-300">
+                <FaEnvelope size={24} />
+              </a>
+            </div>
           </motion.div>
         </motion.div>
 
@@ -212,11 +235,10 @@ const Hero = () => {
             transition={{ duration:3.5, repeat:Infinity, ease:'easeInOut' }} />
 
           {/* Image */}
-          <motion.div animate={{ y:[0,-14,0] }} transition={{ repeat:Infinity, duration:4.5, ease:'easeInOut' }}
-            className="relative w-40 h-40 xs:w-48 xs:h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 group z-10">
+          <div className="relative w-40 h-40 xs:w-48 xs:h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 group z-10">
             <img src={profileImage} alt="Jothini Sivanesan"
               className="w-full h-full object-cover rounded-full border-2 border-accent/40 shadow-2xl shadow-accent/20 brightness-90 group-hover:brightness-100 group-hover:border-accent transition-all duration-500 group-hover:scale-[1.03]" />
-          </motion.div>
+          </div>
 
           {/* Scroll — mobile only, below image */}
           <ScrollIndicator className="flex md:hidden mt-6" />

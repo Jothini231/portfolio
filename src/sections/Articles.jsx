@@ -4,6 +4,13 @@ import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const STATIC_ARTICLES = [
   {
+    title: 'Understanding Event-Driven Architecture: What It Is, Why It Matters, and How It Works',
+    pubDate: '2026-07-04',
+    link: 'https://medium.com/@jothini231/understanding-event-driven-architecture-what-it-is-why-it-matters-and-how-it-works-93245d52957d',
+    thumbnail: 'https://cdn-images-1.medium.com/max/1024/1*D_E26JZVj8ZB_NYNBlAzxg.png',
+    categories: ['Architecture', 'Backend'],
+  },
+  {
     title: 'From One Block to Many Pieces: A Simple Guide to Monolithic and Microservices Architecture',
     pubDate: '2026-06-28',
     link: 'https://medium.com/@jothini231/from-one-block-to-many-pieces-a-simple-guide-to-monolithic-and-microservices-architecture-ae5a27eb177f',
@@ -93,27 +100,27 @@ const Articles = () => {
                 <motion.a key={index} href={article.link} target="_blank" rel="noopener noreferrer"
                   initial={{ opacity:0, y:30 }} whileInView={{ opacity:1, y:0 }}
                   viewport={{ once:true }} transition={{ duration:0.5, delay:index * 0.08 }}
-                  className="w-[85vw] sm:w-[70vw] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start shrink-0 group/card bg-card rounded-2xl overflow-hidden border border-border hover:border-accentHover/50 transition-all duration-300 flex flex-col hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-2">
+                  className="w-[85vw] sm:w-[70vw] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start shrink-0 group/card bg-card rounded-2xl overflow-hidden border border-border hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/5 hover:-translate-y-1 transition-all duration-300 flex flex-col">
 
-                  <div className="relative h-40 sm:h-48 overflow-hidden bg-secondary flex-shrink-0">
+                  <div className="relative h-40 sm:h-48 overflow-hidden bg-secondary flex-shrink-0 border-b border-border/30">
                     <img src={article.thumbnail} alt={article.title} referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-105" />
                   </div>
 
-                  <div className="p-4 sm:p-6 flex flex-col flex-grow text-left">
-                    <div className="flex justify-between items-center mb-2 sm:mb-3 gap-2">
-                      <span className="text-xs font-medium text-accent bg-accent/10 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full shrink-0">
+                  <div className="p-5 sm:p-6 flex flex-col flex-grow text-left">
+                    <div className="flex justify-between items-center mb-3 sm:mb-4 gap-2">
+                      <span className="text-[10px] sm:text-xs font-medium border border-border text-secondaryText px-2.5 py-0.5 rounded-full shrink-0 group-hover/card:border-blue-500/30 group-hover/card:text-blue-400 transition-colors duration-200">
                         {article.categories[0]}
                       </span>
                       <span className="text-xs text-secondaryText whitespace-nowrap">{fmt(article.pubDate)}</span>
                     </div>
-                    <h3 className="text-sm sm:text-base lg:text-lg font-bold text-primaryText mb-2 group-hover/card:text-accentHover transition-colors leading-snug">
+                    <h3 className="text-sm sm:text-base font-semibold text-primaryText mb-4 leading-snug">
                       {article.title}
                     </h3>
-                    <div className="mt-auto pt-3 sm:pt-4 flex items-center text-secondaryText group-hover/card:text-primaryText transition-colors">
-                      <span className="text-xs sm:text-sm font-medium">Read on Medium</span>
-                      <ExternalLink size={14} className="ml-1.5" />
+                    
+                    <div className="mt-auto pt-4 border-t border-border/50 flex items-center text-xs font-medium text-secondaryText group-hover/card:text-accent transition-colors duration-200">
+                      Read on Medium
+                      <ExternalLink size={13} className="ml-1.5" />
                     </div>
                   </div>
                 </motion.a>

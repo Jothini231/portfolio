@@ -23,7 +23,7 @@ const About = () => {
           variants={{ hidden:{ opacity:0 }, visible:{ opacity:1, transition:{ staggerChildren:0.2 } } }}>
           <div className="space-y-4 sm:space-y-6 text-secondaryText text-sm sm:text-base md:text-lg leading-relaxed text-center">
             <motion.p variants={{ hidden:{ opacity:0, y:20 }, visible:{ opacity:1, y:0, transition:{ duration:0.5 } } }}>
-              I am a <strong className="font-semibold text-primaryText">Software Engineering undergraduate</strong> at the University of Kelaniya with a strong passion for building practical and scalable web applications.
+              I am a <strong className="font-semibold text-primaryText">3rd-year Software Engineering undergraduate</strong> at the University of Kelaniya with a strong passion for building practical and scalable web applications.
             </motion.p>
             <motion.p variants={{ hidden:{ opacity:0, y:20 }, visible:{ opacity:1, y:0, transition:{ duration:0.5 } } }}>
               My core expertise lies in <strong className="font-semibold text-primaryText">Full-Stack Web Development</strong>, working extensively with technologies such as React, JavaScript, PHP, and Spring Boot. I thrive on architecting robust backend databases and crafting intuitive, user-friendly interfaces.
@@ -33,9 +33,10 @@ const About = () => {
             </motion.p>
           </div>
 
-          <div className="pt-8 sm:pt-10 border-t border-border/50 mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-8">
+          <div className="pt-8 sm:pt-10 border-t border-border/50 mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-5 sm:gap-8">
             {[
               { label:'Degree', value:'BSc (Hons) Software Engineering' },
+              { label:'Current GPA', value:'3.79/4.00' },
               { label:'Focus',  value:'Full-Stack Web Development' },
               { label:'Location', value:'Sri Lanka' },
             ].map(({ label, value }) => (
