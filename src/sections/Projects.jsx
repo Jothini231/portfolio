@@ -146,7 +146,7 @@ const Projects = () => {
                         <img
                           src={theme === 'dark' ? project.imageDark : project.imageLight}
                           alt={project.title}
-                          className={`w-full h-full ${project.objectFit || 'object-cover'} group-hover/card:scale-105 transition-transform duration-500`}
+                          className={`w-full h-full pointer-events-none ${project.objectFit || 'object-cover'} group-hover/card:scale-105 transition-transform duration-500`}
                         />
                         <span className="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-background/90 backdrop-blur-sm border border-border text-primaryText shadow-sm">
                           {project.type === 'Group Project' ? <Users size={11} /> : <User size={11} />}

@@ -104,7 +104,7 @@ const Articles = () => {
 
                   <div className="relative h-40 sm:h-48 overflow-hidden bg-secondary flex-shrink-0 border-b border-border/30">
                     <img src={article.thumbnail} alt={article.title} referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-105" />
+                      className="w-full h-full pointer-events-none object-cover transition-transform duration-500 group-hover/card:scale-105" />
                   </div>
 
                   <div className="p-5 sm:p-6 flex flex-col flex-grow text-left">
