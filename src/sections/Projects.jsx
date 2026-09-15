@@ -54,7 +54,7 @@ const projects = [
     github: 'https://github.com/Sathiyabalan29/BookFair.git',
   },
   {
-    title: 'Employee Management System',
+    title: 'WorkSphere',
     description: 'A centralized enterprise application for streamlining HR processes and employee management.',
     type: 'Individual Project',
     imageDark: '/employee-dashboard.png',
